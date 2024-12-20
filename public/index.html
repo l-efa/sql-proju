@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Automyynti</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section id="select_container">
+      <section>
+        <label for="brand"> Valitse auton merkki: </label>
+        <select name="brand" id="car_brand"></select>
+      </section>
+
+      <section>
+        <label for="color"> Valitse auton väri</label>
+        <select name="color" id="car_color"></select>
+      </section>
+
+      <section>
+        <label for="min-kilometer"> Valitse auton mittarilukema (minimi)</label>
+        <select name="min-kilometer" id="car_min_kilometer"></select>
+      </section>
+
+      <section>
+        <label for="max-kilometer">
+          Valitse auton mittarilukema (maksimi)</label
+        >
+        <select name="max-kilometer" id="car_max_kilometer"></select>
+      </section>
+
+      <section>
+        <label for="min-year"> Valitse auton vuosimalli (minimi)</label>
+        <select name="min-year" id="car_min_year"></select>
+      </section>
+
+      <section>
+        <label for="max-year"> Valitse auton vuosimalli (maksimi)</label>
+        <select name="max-year" id="car_max_year"></select>
+      </section>
+
+      <section>
+        <label for="fueltype"> Valitse auton käyttövoima</label>
+        <select name="fueltype" id="car_fueltype"></select>
+      </section>
+
+      <section>
+        <label for="location"> Valitse auton sijainti</label>
+        <select name="location" id="listing_location"></select>
+      </section>
+
+      <section>
+        <label for="min-price"> Valitse auton hinta (minimi)</label>
+        <select name="min-price" id="car_min_price"></select>
+      </section>
+
+      <section>
+        <label for="max-price"> Valitse auton hinta (maksimi)</label>
+        <select name="max-price" id="car_max_price"></select>
+      </section>
+    </section>
+
+    <button id="cars_search">Hae autoja</button>
+
+    <div id="listings_container">
+      <div class="listing-item">
+        <div class="image-div">
+          <img src="./images/beige_car.jpg" alt="car" />
+        </div>
+        <div class="text-div">
+          <h3>Honda <span>6000€</span></h3>
+          <h5>2017 * 150000km * Diesel * Manuaali * 4 ovea * Beige</h5>
+        </div>
+        <div class="footer-div">
+          <p>helsinki, <span>Jyrki Korhonen</span></p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+</html>
