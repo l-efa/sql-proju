@@ -10,6 +10,7 @@ let min_price_select = document.getElementById("car_min_price");
 let max_price_select = document.getElementById("car_max_price");
 let search_cars_button = document.getElementById("cars_search");
 let selects = document.querySelectorAll("select");
+let listings_container = document.getElementById("listings_container");
 
 // taulukot select arvoille
 let carBrands = [
@@ -132,6 +133,7 @@ getArrayValues(prices, max_price_select);
 
 // eventlistener napille
 search_cars_button.addEventListener("click", async function () {
+  listings_container.innerHTML = "";
   let parameters = {};
 
   for (let i = 0; i < selects.length; i++) {
@@ -172,11 +174,8 @@ search_cars_button.addEventListener("click", async function () {
   }
 });
 
-let listings_container = document.getElementById("listings_container");
-
 // funktio jolla tehdään elementti jokaiselle listaukselle jotka saatiin tietokannasta
 function makeListings(data) {
-  listings_container.innerHTML = "";
   for (let i = 0; i < data.rows.length; i++) {
     let listing_item = document.createElement("div");
     listing_item.classList.add("listing-item");
@@ -196,7 +195,7 @@ function makeListings(data) {
     text_div_price.textContent = `${data.rows[i].car_price}€`;
     text_div_brand.appendChild(text_div_price);
     let text_div_details = document.createElement("h5");
-    text_div_details.textContent = `${data.rows[i].car_year} * ${data.rows[i].car_kilometers} * ${data.rows[i].car_fueltype} * ${data.rows[i].car_transmission} * ${data.rows[i].car_doorcount} * ${data.rows[i].car_color}`;
+    text_div_details.textContent = `${data.rows[i].car_year} * ${data.rows[i].car_kilometers}km * ${data.rows[i].car_fueltype} * ${data.rows[i].car_transmission} * ${data.rows[i].car_doorcount} * ${data.rows[i].car_color}`;
     text_div.appendChild(text_div_brand);
     text_div.appendChild(text_div_details);
     listing_item.appendChild(text_div);
