@@ -10,4 +10,4 @@
 
 3. käynnistä serveri: node server.js
 
-4. avaa https://127.0.0.1:3000
+4. avaa http://127.0.0.1:3000
